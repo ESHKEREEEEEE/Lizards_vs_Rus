@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\pr2.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\pr2.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\pr2Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\pr2">
+      <UniqueIdentifier>{B16D907A-7D4A-38D7-9C73-3624D9014A00}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\pr2\pr2.Build.cs">
+      <Filter>Source\pr2</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\pr2\pr2.cpp">
+      <Filter>Source\pr2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\pr2\pr2.h">
+      <Filter>Source\pr2</Filter>
+    </ClInclude>
+    <Filter Include="Source\pr2\Private">
+      <UniqueIdentifier>{6FDF80F7-52B6-39AC-98D6-CDE2463BBDB1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\pr2\Private\BTTask_Attack_CPP.cpp">
+      <Filter>Source\pr2\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\CanKillNotify_CPP.cpp">
+      <Filter>Source\pr2\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\FistCollisionCPP.cpp">
+      <Filter>Source\pr2\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\Unit_CPP.cpp">
+      <Filter>Source\pr2\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\pr2\Public">
+      <UniqueIdentifier>{B9C1DB5E-A46B-377E-93F9-3169D5C7939A}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\pr2\Public\BTTask_Attack_CPP.h">
+      <Filter>Source\pr2\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\pr2\Public\CanKillNotify_CPP.h">
+      <Filter>Source\pr2\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\pr2\Public\FistCollisionCPP.h">
+      <Filter>Source\pr2\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\pr2\Public\Unit_CPP.h">
+      <Filter>Source\pr2\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
