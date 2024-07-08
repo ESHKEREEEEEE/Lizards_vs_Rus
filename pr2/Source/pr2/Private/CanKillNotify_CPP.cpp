@@ -7,7 +7,7 @@
 void UCanKillNotify_CPP::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation)
 {
 	if (GEngine) {
-		GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Purple, FString("Notify " + MeshComp->GetOwner()->GetName())); //DEBUG
+		//GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Purple, FString("Notify " + MeshComp->GetOwner()->GetName())); //DEBUG
 	}
 	AUnit_CPP* Unit = Cast<AUnit_CPP>(MeshComp->GetOwner());
 	if (Unit) {

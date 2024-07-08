@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeUnit_CPP() {}
 
 // Begin Cross Module References
+AIMODULE_API UClass* Z_Construct_UClass_UBehaviorTree_NoRegister();
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
@@ -185,6 +186,11 @@ struct Z_Construct_UClass_AUnit_CPP_Statics
 		{ "Category", "Assets" },
 		{ "ModuleRelativePath", "Public/Unit_CPP.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Tree_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "AI" },
+		{ "ModuleRelativePath", "Public/Unit_CPP.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SkeletalMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FistCollision;
@@ -205,6 +211,7 @@ struct Z_Construct_UClass_AUnit_CPP_Statics
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Dex;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AttackRadius;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AlternateMeshAsset;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Tree;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -247,6 +254,7 @@ const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AUnit_CPP_Statics
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AUnit_CPP_Statics::NewProp_Dex = { "Dex", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUnit_CPP, Dex), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Dex_MetaData), NewProp_Dex_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AUnit_CPP_Statics::NewProp_AttackRadius = { "AttackRadius", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUnit_CPP, AttackRadius), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttackRadius_MetaData), NewProp_AttackRadius_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AUnit_CPP_Statics::NewProp_AlternateMeshAsset = { "AlternateMeshAsset", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUnit_CPP, AlternateMeshAsset), Z_Construct_UClass_USkeletalMesh_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AlternateMeshAsset_MetaData), NewProp_AlternateMeshAsset_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AUnit_CPP_Statics::NewProp_Tree = { "Tree", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUnit_CPP, Tree), Z_Construct_UClass_UBehaviorTree_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Tree_MetaData), NewProp_Tree_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AUnit_CPP_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUnit_CPP_Statics::NewProp_SkeletalMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUnit_CPP_Statics::NewProp_FistCollision,
@@ -263,6 +271,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AUnit_CPP
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUnit_CPP_Statics::NewProp_Dex,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUnit_CPP_Statics::NewProp_AttackRadius,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUnit_CPP_Statics::NewProp_AlternateMeshAsset,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUnit_CPP_Statics::NewProp_Tree,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AUnit_CPP_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AUnit_CPP_Statics::DependentSingletons[])() = {
@@ -305,10 +314,10 @@ AUnit_CPP::~AUnit_CPP() {}
 struct Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Unit_CPP_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AUnit_CPP, AUnit_CPP::StaticClass, TEXT("AUnit_CPP"), &Z_Registration_Info_UClass_AUnit_CPP, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUnit_CPP), 2892261546U) },
+		{ Z_Construct_UClass_AUnit_CPP, AUnit_CPP::StaticClass, TEXT("AUnit_CPP"), &Z_Registration_Info_UClass_AUnit_CPP, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUnit_CPP), 2755630339U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Unit_CPP_h_1816843709(TEXT("/Script/pr2"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Unit_CPP_h_2941980509(TEXT("/Script/pr2"),
 	Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Unit_CPP_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Unit_CPP_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

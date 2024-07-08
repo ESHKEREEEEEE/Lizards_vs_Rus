@@ -46,6 +46,12 @@ void AUnit_CPP::AnimNotifyAction()
 	}
 }
 
+
+UBehaviorTree* AUnit_CPP::GetBehaviorTree() const
+{
+	return this->Tree;
+}
+
 // Called when the game starts or when spawned
 void AUnit_CPP::BeginPlay()
 {

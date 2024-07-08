@@ -42,7 +42,16 @@
     <Filter Include="Source\pr2\Private">
       <UniqueIdentifier>{6FDF80F7-52B6-39AC-98D6-CDE2463BBDB1}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\pr2\Private\AIC_Unit_CPP.cpp">
+      <Filter>Source\pr2\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\AnimInstance_Unit_CPP.cpp">
+      <Filter>Source\pr2\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\pr2\Private\BTTask_Attack_CPP.cpp">
+      <Filter>Source\pr2\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\BTTask_SetEnemy_CPP.cpp">
       <Filter>Source\pr2\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\pr2\Private\CanKillNotify_CPP.cpp">
@@ -51,19 +60,46 @@
     <ClCompile Include="..\..\Source\pr2\Private\FistCollisionCPP.cpp">
       <Filter>Source\pr2\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\GameMode_CPP.cpp">
+      <Filter>Source\pr2\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\Menu_CPP.cpp">
+      <Filter>Source\pr2\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\Rus_CPP.cpp">
+      <Filter>Source\pr2\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\pr2\Private\Unit_CPP.cpp">
       <Filter>Source\pr2\Private</Filter>
     </ClCompile>
     <Filter Include="Source\pr2\Public">
       <UniqueIdentifier>{B9C1DB5E-A46B-377E-93F9-3169D5C7939A}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\pr2\Public\AIC_Unit_CPP.h">
+      <Filter>Source\pr2\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\pr2\Public\AnimInstance_Unit_CPP.h">
+      <Filter>Source\pr2\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\pr2\Public\BTTask_Attack_CPP.h">
+      <Filter>Source\pr2\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\pr2\Public\BTTask_SetEnemy_CPP.h">
       <Filter>Source\pr2\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\pr2\Public\CanKillNotify_CPP.h">
       <Filter>Source\pr2\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\pr2\Public\FistCollisionCPP.h">
+      <Filter>Source\pr2\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\pr2\Public\GameMode_CPP.h">
+      <Filter>Source\pr2\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\pr2\Public\Menu_CPP.h">
+      <Filter>Source\pr2\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\pr2\Public\Rus_CPP.h">
       <Filter>Source\pr2\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\pr2\Public\Unit_CPP.h">

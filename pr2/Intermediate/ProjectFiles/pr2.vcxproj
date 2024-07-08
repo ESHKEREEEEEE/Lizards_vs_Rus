@@ -262,7 +262,16 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\pr2\pr2.h"/>
+    <ClCompile Include="..\..\Source\pr2\Private\AIC_Unit_CPP.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\AnimInstance_Unit_CPP.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\pr2\Private\BTTask_Attack_CPP.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\BTTask_SetEnemy_CPP.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\pr2\Private\CanKillNotify_CPP.cpp">
@@ -271,12 +280,27 @@
     <ClCompile Include="..\..\Source\pr2\Private\FistCollisionCPP.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\GameMode_CPP.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\Menu_CPP.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\Rus_CPP.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\pr2\Private\Unit_CPP.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClInclude Include="..\..\Source\pr2\Public\AIC_Unit_CPP.h"/>
+    <ClInclude Include="..\..\Source\pr2\Public\AnimInstance_Unit_CPP.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\BTTask_Attack_CPP.h"/>
+    <ClInclude Include="..\..\Source\pr2\Public\BTTask_SetEnemy_CPP.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\CanKillNotify_CPP.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\FistCollisionCPP.h"/>
+    <ClInclude Include="..\..\Source\pr2\Public\GameMode_CPP.h"/>
+    <ClInclude Include="..\..\Source\pr2\Public\Menu_CPP.h"/>
+    <ClInclude Include="..\..\Source\pr2\Public\Rus_CPP.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\Unit_CPP.h"/>
   </ItemGroup>
   <PropertyGroup>

@@ -4,11 +4,14 @@
 
 #include "Components/SphereComponent.h"
 #include "CoreMinimal.h"
+#include "BehaviorTree/BehaviorTree.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/Character.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Math/UnrealMathUtility.h"
 #include "BTTask_Attack_CPP.h"
+#include "Menu_CPP.h"
+#include "Kismet/GameplayStatics.h"
 #include "Unit_CPP.generated.h"
 
 UCLASS()
@@ -51,6 +54,10 @@ public:
 	UFUNCTION(Category = "Input")
 	void AnimNotifyAction();
 
+	void FindEnemy();
+	
+	UBehaviorTree* GetBehaviorTree() const;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -79,6 +86,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Assets")
 	USkeletalMesh* AlternateMeshAsset;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="AI", meta = (AllowPrivateAccess="true"))
+	UBehaviorTree* Tree;
 
 	
 
