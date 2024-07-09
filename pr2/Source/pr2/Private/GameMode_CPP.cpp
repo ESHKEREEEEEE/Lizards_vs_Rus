@@ -27,6 +27,7 @@ void AGameMode_CPP::Nachinaem()
 {
 	UWorld* world = GetWorld();
 	if (world) {
+		UGameplayStatics::PlaySound2D(world, BackgroundMusic, 0.15, 1, 0, nullptr, UGameplayStatics::GetPlayerCharacter(GetWorld(), 0), true);
 		if (RusToSpawn) {
 			while (RusCounter < NeededRus) {
 				FActorSpawnParameters RusSpawnParams;

@@ -71,6 +71,9 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 	class UMenu_CPP* Menu;
 
+	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "Unit game variables")
+	USoundBase* BackgroundMusic;
+
 
 protected:
 	virtual void BeginPlay() override;

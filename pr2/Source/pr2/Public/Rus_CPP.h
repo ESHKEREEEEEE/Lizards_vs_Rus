@@ -14,5 +14,5 @@ class PR2_API ARus_CPP : public AUnit_CPP
 {
 	GENERATED_BODY()
 	
-	ARus_CPP();
+	//ARus_CPP();
 };

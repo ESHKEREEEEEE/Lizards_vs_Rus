@@ -8,6 +8,7 @@
 #include <string.h>
 #include <iostream>
 #include "Unit_CPP.h"
+#include "AnimInstance_Unit_CPP.h"
 #include "CanKillNotify_CPP.h"
 
 // Sets default values
@@ -28,6 +29,8 @@ AUnit_CPP::AUnit_CPP()
 
 void AUnit_CPP::AnimNotifyAction()
 {
+	
+	UGameplayStatics::PlaySound2D(GetWorld(), HitSound, 0.125, 1, 0, nullptr, UGameplayStatics::GetPlayerCharacter(GetWorld(), 0), true);
 	GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Green, FString(GetName() + "catched anim notify"));
 	TArray<AActor*> OverActors;
 	this->GetOverlappingActors(OverActors, EnemyClass);
@@ -39,7 +42,11 @@ void AUnit_CPP::AnimNotifyAction()
 				CurrentEnemy->Health = CurrentEnemy->Health - this->Damage;
 				if (CurrentEnemy->Health <= 0) {
 					//Add killing enemy with animation
-					CurrentEnemy->Destroy();
+					UAnimInstance_Unit_CPP* CurrentEnemyAnim = Cast<UAnimInstance_Unit_CPP>(CurrentEnemy->GetMesh()->GetAnimInstance());
+					if (CurrentEnemyAnim) {
+						CurrentEnemyAnim->isDeadAnim = true;
+					}
+					CurrentEnemy->Tags.Remove(FName("Alive"));
 				}
 			}
 		}

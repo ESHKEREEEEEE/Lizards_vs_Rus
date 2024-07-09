@@ -17,6 +17,7 @@ ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USkeletalMesh_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 PR2_API UClass* Z_Construct_UClass_AUnit_CPP();
 PR2_API UClass* Z_Construct_UClass_AUnit_CPP_NoRegister();
@@ -147,6 +148,10 @@ struct Z_Construct_UClass_AUnit_CPP_Statics
 		{ "Category", "Unit game variables" },
 		{ "ModuleRelativePath", "Public/Unit_CPP.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HitSound_MetaData[] = {
+		{ "Category", "Unit game variables" },
+		{ "ModuleRelativePath", "Public/Unit_CPP.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_isDead_MetaData[] = {
 		{ "Category", "Unit game variables" },
 		{ "ModuleRelativePath", "Public/Unit_CPP.h" },
@@ -199,6 +204,7 @@ struct Z_Construct_UClass_AUnit_CPP_Statics
 	static const UECodeGen_Private::FDoublePropertyParams NewProp_Damage;
 	static const UECodeGen_Private::FDoublePropertyParams NewProp_Health;
 	static const UECodeGen_Private::FDoublePropertyParams NewProp_PowerMultiplier;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_HitSound;
 	static void NewProp_isDead_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_isDead;
 	static void NewProp_isAttacking_SetBit(void* Obj);
@@ -230,6 +236,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AUnit_CPP_Stat
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UClass_AUnit_CPP_Statics::NewProp_Damage = { "Damage", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUnit_CPP, Damage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Damage_MetaData), NewProp_Damage_MetaData) };
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UClass_AUnit_CPP_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUnit_CPP, Health), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Health_MetaData), NewProp_Health_MetaData) };
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UClass_AUnit_CPP_Statics::NewProp_PowerMultiplier = { "PowerMultiplier", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUnit_CPP, PowerMultiplier), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PowerMultiplier_MetaData), NewProp_PowerMultiplier_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AUnit_CPP_Statics::NewProp_HitSound = { "HitSound", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUnit_CPP, HitSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HitSound_MetaData), NewProp_HitSound_MetaData) };
 void Z_Construct_UClass_AUnit_CPP_Statics::NewProp_isDead_SetBit(void* Obj)
 {
 	((AUnit_CPP*)Obj)->isDead = 1;
@@ -263,6 +270,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AUnit_CPP
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUnit_CPP_Statics::NewProp_Damage,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUnit_CPP_Statics::NewProp_Health,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUnit_CPP_Statics::NewProp_PowerMultiplier,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUnit_CPP_Statics::NewProp_HitSound,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUnit_CPP_Statics::NewProp_isDead,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUnit_CPP_Statics::NewProp_isAttacking,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUnit_CPP_Statics::NewProp_isRunning,
@@ -314,10 +322,10 @@ AUnit_CPP::~AUnit_CPP() {}
 struct Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Unit_CPP_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AUnit_CPP, AUnit_CPP::StaticClass, TEXT("AUnit_CPP"), &Z_Registration_Info_UClass_AUnit_CPP, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUnit_CPP), 2755630339U) },
+		{ Z_Construct_UClass_AUnit_CPP, AUnit_CPP::StaticClass, TEXT("AUnit_CPP"), &Z_Registration_Info_UClass_AUnit_CPP, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUnit_CPP), 2574318748U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Unit_CPP_h_2941980509(TEXT("/Script/pr2"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Unit_CPP_h_1101199709(TEXT("/Script/pr2"),
 	Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Unit_CPP_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Unit_CPP_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

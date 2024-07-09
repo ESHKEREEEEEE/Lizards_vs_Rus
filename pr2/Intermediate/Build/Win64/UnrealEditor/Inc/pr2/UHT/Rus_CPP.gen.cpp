@@ -84,10 +84,10 @@ ARus_CPP::~ARus_CPP() {}
 struct Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Rus_CPP_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ARus_CPP, ARus_CPP::StaticClass, TEXT("ARus_CPP"), &Z_Registration_Info_UClass_ARus_CPP, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARus_CPP), 1871687855U) },
+		{ Z_Construct_UClass_ARus_CPP, ARus_CPP::StaticClass, TEXT("ARus_CPP"), &Z_Registration_Info_UClass_ARus_CPP, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARus_CPP), 98106880U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Rus_CPP_h_185960335(TEXT("/Script/pr2"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Rus_CPP_h_445235292(TEXT("/Script/pr2"),
 	Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Rus_CPP_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_Rus_CPP_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -48,7 +48,13 @@
     <ClCompile Include="..\..\Source\pr2\Private\AnimInstance_Unit_CPP.cpp">
       <Filter>Source\pr2\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\Border_CPP.cpp">
+      <Filter>Source\pr2\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\pr2\Private\BTTask_Attack_CPP.cpp">
+      <Filter>Source\pr2\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\BTTask_FindRandomLocation.cpp">
       <Filter>Source\pr2\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\pr2\Private\BTTask_SetEnemy_CPP.cpp">
@@ -81,7 +87,13 @@
     <ClInclude Include="..\..\Source\pr2\Public\AnimInstance_Unit_CPP.h">
       <Filter>Source\pr2\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\pr2\Public\Border_CPP.h">
+      <Filter>Source\pr2\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\pr2\Public\BTTask_Attack_CPP.h">
+      <Filter>Source\pr2\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\pr2\Public\BTTask_FindRandomLocation.h">
       <Filter>Source\pr2\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\pr2\Public\BTTask_SetEnemy_CPP.h">

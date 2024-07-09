@@ -268,7 +268,13 @@
     <ClCompile Include="..\..\Source\pr2\Private\AnimInstance_Unit_CPP.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\Border_CPP.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\pr2\Private\BTTask_Attack_CPP.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\BTTask_FindRandomLocation.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\pr2\Private\BTTask_SetEnemy_CPP.cpp">
@@ -294,7 +300,9 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\pr2\Public\AIC_Unit_CPP.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\AnimInstance_Unit_CPP.h"/>
+    <ClInclude Include="..\..\Source\pr2\Public\Border_CPP.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\BTTask_Attack_CPP.h"/>
+    <ClInclude Include="..\..\Source\pr2\Public\BTTask_FindRandomLocation.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\BTTask_SetEnemy_CPP.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\CanKillNotify_CPP.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\FistCollisionCPP.h"/>

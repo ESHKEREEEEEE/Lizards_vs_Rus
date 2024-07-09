@@ -21,11 +21,13 @@ EBTNodeResult::Type UBTTask_SetEnemy_CPP::ExecuteTask(UBehaviorTreeComponent& Ow
 			if (world) {
 				TArray<AActor*> OutActors;
 				UGameplayStatics::GetAllActorsOfClassWithTag(world, Unit->EnemyClass, FName("Alive"), OutActors);
-				float distance;
-				AActor* NearestEnemy = UGameplayStatics::FindNearestActor(Unit->GetActorLocation(), OutActors, distance);
-				OwnerComp.GetBlackboardComponent()->SetValueAsObject(FName("Enemy"), NearestEnemy);
-				FinishLatentTask(OwnerComp, EBTNodeResult::Succeeded);
-				return EBTNodeResult::Succeeded;
+				if (!OutActors.IsEmpty()) {
+					float distance;
+					AActor* NearestEnemy = UGameplayStatics::FindNearestActor(Unit->GetActorLocation(), OutActors, distance);
+					OwnerComp.GetBlackboardComponent()->SetValueAsObject(FName("Enemy"), NearestEnemy);
+					FinishLatentTask(OwnerComp, EBTNodeResult::Succeeded);
+					return EBTNodeResult::Succeeded;
+				}
 			}
 		}
 	}
