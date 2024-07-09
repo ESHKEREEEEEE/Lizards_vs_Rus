@@ -4,14 +4,14 @@
 #include "Menu_CPP.h"
 #include "Kismet/GameplayStatics.h"
 #include "Math/UnrealMathUtility.h"
-#include "Kismet/GameplayStatics.h"
 #include "GameMode_CPP.h"
 #include "Internationalization/Text.h"
 
 void UMenu_CPP::NativeConstruct()
 {
 	Super::NativeConstruct();
-	
+	bIsFocusable = true;
+	SetUserFocus(UGameplayStatics::GetPlayerController(GetWorld(), 0));
 	if (ButtonGo) {
 		this->ButtonGo->OnClicked.AddDynamic(this, &UMenu_CPP::OnButtonGoClicked);
 	}

@@ -5,9 +5,9 @@
 	Начать с GameMode
 */
 
-#include <string.h>
-#include <iostream>
 #include "Unit_CPP.h"
+//#include <string.h>
+//#include <iostream>
 #include "AnimInstance_Unit_CPP.h"
 #include "CanKillNotify_CPP.h"
 
@@ -15,7 +15,7 @@
 AUnit_CPP::AUnit_CPP()
 {
 	//TICKS DISABELED FOR PERFORMANCE!!!!111!!!
-	PrimaryActorTick.bCanEverTick = false;
+	PrimaryActorTick.bCanEverTick = true;
 	if (AlternateMeshAsset)
 	{
 		SkeletalMesh->SetSkeletalMesh(AlternateMeshAsset);

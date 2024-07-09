@@ -253,6 +253,7 @@
     <None Include="..\..\Source\pr2.Target.cs"/>
     <None Include="..\..\Source\pr2Editor.Target.cs"/>
     <None Include="..\..\.vsconfig"/>
+    <None Include="..\..\pr2.png"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
@@ -283,6 +284,9 @@
     <ClCompile Include="..\..\Source\pr2\Private\CanKillNotify_CPP.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\DebugBTTask_MoveTo.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\pr2\Private\FistCollisionCPP.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -305,6 +309,7 @@
     <ClInclude Include="..\..\Source\pr2\Public\BTTask_FindRandomLocation.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\BTTask_SetEnemy_CPP.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\CanKillNotify_CPP.h"/>
+    <ClInclude Include="..\..\Source\pr2\Public\DebugBTTask_MoveTo.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\FistCollisionCPP.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\GameMode_CPP.h"/>
     <ClInclude Include="..\..\Source\pr2\Public\Menu_CPP.h"/>

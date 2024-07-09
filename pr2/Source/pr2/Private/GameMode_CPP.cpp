@@ -5,6 +5,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Unit_CPP.h"
 #include "AIC_Unit_CPP.h"
+#include <NavigationSystem.h>
 
 void AGameMode_CPP::BeginPlay()
 {
@@ -19,12 +20,12 @@ void AGameMode_CPP::BeginPlay()
 			Menu->AddToPlayerScreen();
 		}
 	}
-
 	Super::BeginPlay();
 }
 
 void AGameMode_CPP::Nachinaem()
 {
+	GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Yellow, FString("GameMode->Nachinaem()"));
 	UWorld* world = GetWorld();
 	if (world) {
 		UGameplayStatics::PlaySound2D(world, BackgroundMusic, 0.15, 1, 0, nullptr, UGameplayStatics::GetPlayerCharacter(GetWorld(), 0), true);
@@ -49,7 +50,7 @@ void AGameMode_CPP::Nachinaem()
 			//DebugNeededLizardsMessage.AppendInt(NeededLizards);
 			//GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Red, DebugNeededLizardsMessage);
 
-
+			//
 			while (LizCounter < NeededLizards) {
 				FActorSpawnParameters LizSpawnParams;
 				FVector BoundingBoxSpawnHalfSize = FVector(10000, 4000, 0);
@@ -80,14 +81,14 @@ void AGameMode_CPP::Nachinaem()
 						if (CurrentController) {
 							CurrentController->Nachinaem(CurrentUnit);
 						}
+						else { GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Red, FString("No current controller")); }
 					}
+					else { GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Red, FString("No current unit")); }
 				}
 			}
+			else { GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Red, FString("No nenu")); }
 		}
+		else { GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Red, FString("No world")); }
 	}
-	
-
-	//скрытие виджета
-
-
+	else { GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Red, FString("No menu class")); }
 }

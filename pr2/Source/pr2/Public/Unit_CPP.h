@@ -50,7 +50,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "Unit game variables")
 	double PowerMultiplier = 1;
 
-	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "Unit game variables")
+	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "Assets")
 	USoundBase* HitSound;
 
 	//Function called on CanKillNotify

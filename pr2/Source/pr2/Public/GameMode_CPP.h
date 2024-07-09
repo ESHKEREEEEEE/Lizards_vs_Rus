@@ -33,7 +33,7 @@ public:
 	int32 RusCounter;
 
 	/** Please add a variable description */
-	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "Default")
+	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "Default") //???
 	FVector CurrentRusLocation;
 
 	/** Please add a variable description */

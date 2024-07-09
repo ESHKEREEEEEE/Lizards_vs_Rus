@@ -1,6 +1,11 @@
 # Visual Studio 2015 user specific files
 .vs/
 
+# Erunda
+*.ushaderbytecode
+*.pdb
+*.ucas
+
 # Compiled Object files
 *.slo
 *.lo
@@ -15,6 +20,7 @@
 *.so
 *.dylib
 *.dll
+*.ubulk
 
 # Fortran module files
 *.mod

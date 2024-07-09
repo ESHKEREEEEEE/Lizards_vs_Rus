@@ -77,8 +77,9 @@
 /DNDEBUG=1
 /DUE_BUILD_DEVELOPMENT=1
 /DORIGINAL_FILE_NAME="UnrealEditor-pr2.dll"
-/DBUILD_ICON_FILE_NAME="\"..\\Build\\Windows\\Resources\\Default.ico\""
+/DBUILD_ICON_FILE_NAME="\"C:\\Users\\dhvfn\\Documents\\GitHub\\Lizards_vs_Rus\\pr2\\Build\\Windows\\Application.ico\""
 /DPROJECT_COPYRIGHT_STRING="Fill out your copyright notice in the Description page of Project Settings."
+/DPROJECT_PRODUCT_NAME=RusVSLizards
 /DPROJECT_PRODUCT_IDENTIFIER=pr2
 /fo "C:\Users\dhvfn\Documents\GitHub\Lizards_vs_Rus\pr2\Intermediate\Build\Win64\x64\UnrealEditor\Development\pr2\Default.rc2.res"
 "..\Build\Windows\Resources\Default.rc2"

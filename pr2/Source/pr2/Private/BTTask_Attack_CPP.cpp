@@ -16,7 +16,7 @@ EBTNodeResult::Type UBTTask_Attack_CPP::ExecuteTask(UBehaviorTreeComponent& Owne
 	UBehaviorTreeComponent* component = (&OwnerComp); //save UBehaviorTreeComponent
 	AAIController* controller = OwnerComp.GetAIOwner();// save controller
 	AUnit_CPP* unit = Cast<AUnit_CPP>(controller->GetPawn()); //save curent unit
-	//GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Purple, FString(unit->GetName() + "Started executing attack")); //DEBUG
+	GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Purple, FString(unit->GetName() + "Started executing attack")); //DEBUG
 	float time;
 	time = unit->GetMesh()->GetAnimInstance()->Montage_Play(unit->AttackAnimMontage, 1.0f, EMontagePlayReturnType::Duration, 0.0f, true); //playing attack montage
 
@@ -35,9 +35,9 @@ void UBTTask_Attack_CPP::AttackEnded(UBehaviorTreeComponent* OwnerComp)
 	AAIController* controller = OwnerComp->GetAIOwner(); // save controller
 	if (controller) {
 		AUnit_CPP* unit = Cast<AUnit_CPP>(controller->GetPawn()); //save curent unit
-		//GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Purple, FString(unit->GetName() + "ended attacking")); //DEBUG
+		GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Purple, FString(unit->GetName() + "ended attacking")); //DEBUG
 		if (unit) { //check unit correct casting
-			//GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Green, FString(unit->GetName() + "Succesfully finished task")); //DEBUG
+			GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Green, FString(unit->GetName() + "Succesfully finished task")); //DEBUG
 			component->OnTaskFinished(this, EBTNodeResult::Succeeded);// set task success
 		}
 	}

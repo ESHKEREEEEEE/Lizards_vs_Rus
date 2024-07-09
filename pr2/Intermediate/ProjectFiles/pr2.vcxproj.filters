@@ -12,6 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\pr2.png" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -63,6 +64,9 @@
     <ClCompile Include="..\..\Source\pr2\Private\CanKillNotify_CPP.cpp">
       <Filter>Source\pr2\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\pr2\Private\DebugBTTask_MoveTo.cpp">
+      <Filter>Source\pr2\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\pr2\Private\FistCollisionCPP.cpp">
       <Filter>Source\pr2\Private</Filter>
     </ClCompile>
@@ -100,6 +104,9 @@
       <Filter>Source\pr2\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\pr2\Public\CanKillNotify_CPP.h">
+      <Filter>Source\pr2\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\pr2\Public\DebugBTTask_MoveTo.h">
       <Filter>Source\pr2\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\pr2\Public\FistCollisionCPP.h">

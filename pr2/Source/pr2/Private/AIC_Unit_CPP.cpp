@@ -13,5 +13,6 @@ void AAIC_Unit_CPP::Nachinaem(AUnit_CPP* Unit)
 	//UBlackboardComponent* b;
 	//UseBlackboard(Unit->GetBehaviorTree()->BlackboardAsset, b);
 	//Blackboard = b;
-	RunBehaviorTree(Unit->GetBehaviorTree());
+	if(Unit->GetBehaviorTree()){ GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Blue, FString(this->GetName() + "Has Behavior Tree")); }
+	if (RunBehaviorTree(Unit->GetBehaviorTree())){ GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Blue, FString(this->GetName() + "Controller" + Unit->GetName() + "Run Behavior tree")); }
 }
