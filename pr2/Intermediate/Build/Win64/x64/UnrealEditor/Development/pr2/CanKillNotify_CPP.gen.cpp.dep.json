@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\dhvfn\\documents\\github\\lizards_vs_rus\\pr2\\intermediate\\build\\win64\\unrealeditor\\inc\\pr2\\uht\\cankillnotify_cpp.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\dhvfn\\documents\\github\\lizards_vs_rus\\pr2\\intermediate\\build\\win64\\x64\\pr2editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
+        "Includes": [
+            "c:\\users\\dhvfn\\documents\\github\\lizards_vs_rus\\pr2\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\pr2\\definitions.pr2.h",
+            "c:\\users\\dhvfn\\documents\\github\\lizards_vs_rus\\pr2\\source\\pr2\\public\\cankillnotify_cpp.h",
+            "c:\\users\\dhvfn\\documents\\github\\lizards_vs_rus\\pr2\\intermediate\\build\\win64\\unrealeditor\\inc\\pr2\\uht\\cankillnotify_cpp.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
