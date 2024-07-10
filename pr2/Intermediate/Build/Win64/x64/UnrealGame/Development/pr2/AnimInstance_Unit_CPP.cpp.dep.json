@@ -127,7 +127,17 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\gameplaystaticstypes.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\gameplaystatics.generated.h",
             "c:\\users\\dhvfn\\documents\\github\\lizards_vs_rus\\pr2\\intermediate\\build\\win64\\unrealgame\\inc\\pr2\\uht\\unit_cpp.generated.h",
-            "c:\\users\\dhvfn\\documents\\github\\lizards_vs_rus\\pr2\\intermediate\\build\\win64\\unrealgame\\inc\\pr2\\uht\\animinstance_unit_cpp.generated.h"
+            "c:\\users\\dhvfn\\documents\\github\\lizards_vs_rus\\pr2\\intermediate\\build\\win64\\unrealgame\\inc\\pr2\\uht\\animinstance_unit_cpp.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\aicontroller.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\perception\\aiperceptionlistenerinterface.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\aiperceptionlistenerinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\genericteamagentinterface.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\genericteamagentinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\public\\visuallogger\\visualloggerdebugsnapshotinterface.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\visualloggerdebugsnapshotinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\aicontroller.generated.h",
+            "c:\\users\\dhvfn\\documents\\github\\lizards_vs_rus\\pr2\\source\\pr2\\public\\aic_unit_cpp.h",
+            "c:\\users\\dhvfn\\documents\\github\\lizards_vs_rus\\pr2\\intermediate\\build\\win64\\unrealgame\\inc\\pr2\\uht\\aic_unit_cpp.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

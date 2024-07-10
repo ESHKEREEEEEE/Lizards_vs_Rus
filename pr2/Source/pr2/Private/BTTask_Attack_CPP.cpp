@@ -35,10 +35,11 @@ void UBTTask_Attack_CPP::AttackEnded(UBehaviorTreeComponent* OwnerComp)
 	AAIController* controller = OwnerComp->GetAIOwner(); // save controller
 	if (controller) {
 		AUnit_CPP* unit = Cast<AUnit_CPP>(controller->GetPawn()); //save curent unit
-		GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Purple, FString(unit->GetName() + "ended attacking")); //DEBUG
+		//GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Purple, FString(unit->GetName() + "ended attacking")); //DEBUG
 		if (unit) { //check unit correct casting
 			GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Green, FString(unit->GetName() + "Succesfully finished task")); //DEBUG
 			component->OnTaskFinished(this, EBTNodeResult::Succeeded);// set task success
 		}
+		component->OnTaskFinished(this, EBTNodeResult::Failed);// set task success
 	}
 }

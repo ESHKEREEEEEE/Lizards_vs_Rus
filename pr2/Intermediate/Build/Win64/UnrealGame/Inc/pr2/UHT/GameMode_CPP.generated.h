@@ -9,12 +9,14 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AGameMode_CPP;
 #ifdef PR2_GameMode_CPP_generated_h
 #error "GameMode_CPP.generated.h already included, missing '#pragma once' in GameMode_CPP.h"
 #endif
 #define PR2_GameMode_CPP_generated_h
 
 #define FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_GameMode_CPP_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execMyGetGameMode); \
 	DECLARE_FUNCTION(execNachinaem);
 
 

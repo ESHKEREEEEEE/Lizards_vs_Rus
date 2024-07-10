@@ -6,6 +6,8 @@
 #include "Kismet/GameplayStatics.h"
 #include "NavigationSystem.h"
 #include "Unit_CPP.h"
+#include "AIController.h"
+#include "BrainComponent.h"
 #include "AIC_Unit_CPP.h"
 
 
@@ -32,11 +34,12 @@ EBTNodeResult::Type UBTTask_SetEnemy_CPP::ExecuteTask(UBehaviorTreeComponent& Ow
 
 							if (OwnerComp.GetBlackboardComponent()->GetValueAsObject(FName("Enemy"))) { Result = EBTNodeResult::Succeeded; }
 
-
-							//FinishLatentTask(OwnerComp, EBTNodeResult::Succeeded);
-
 						}
 						else GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Red, FString("No NearestEnemy"));
+					}
+					else {
+						GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Red, FString("OutActors is empty"));
+						//Controller->BrainComponent->StopLogic(FString("Victory"));
 					}
 				} 
 				else GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Red, FString("EnemyClass is empty"));
@@ -46,9 +49,8 @@ EBTNodeResult::Type UBTTask_SetEnemy_CPP::ExecuteTask(UBehaviorTreeComponent& Ow
 		else GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Red, FString("No Unit"));
 	}
 	else GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Red, FString("No Controller"));
-	//return EBTNodeResult::Failed;
 	if (Result == EBTNodeResult::Succeeded) {GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Purple, FString("UBTTask_SetEnemy_CPP Succeeded")); }
-	else { GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Purple, FString("UBTTask_SetEnemy_CPP Failed")); }
+	else { GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Purple, FString("UBTTask_SetEnemy_CPP not succeeded")); }
 	FinishLatentTask(OwnerComp, Result);
 	return Result;
 }

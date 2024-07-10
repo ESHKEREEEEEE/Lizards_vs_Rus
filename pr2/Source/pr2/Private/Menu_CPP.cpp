@@ -21,6 +21,7 @@ void UMenu_CPP::NativeConstruct()
 	if (LizSlider) {
 		this->LizSlider->OnValueChanged.AddDynamic(this, &UMenu_CPP::OnLizSliderValueChanged);
 	}
+	
 }
 
 void UMenu_CPP::OnButtonGoClicked()

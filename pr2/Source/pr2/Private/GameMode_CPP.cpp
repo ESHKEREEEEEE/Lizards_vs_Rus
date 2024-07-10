@@ -3,17 +3,34 @@
 
 #include "GameMode_CPP.h"
 #include "Kismet/GameplayStatics.h"
+#include "GameFramework/PlayerController.h"
+#include "GameFramework/InputSettings.h"
 #include "Unit_CPP.h"
 #include "AIC_Unit_CPP.h"
 #include <NavigationSystem.h>
 
 void AGameMode_CPP::BeginPlay()
 {
+	APlayerController* PlayerController = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+	if (PlayerController)
+	{
+		// Create and bind the input component if it doesn't exist
+		if (!PlayerController->InputComponent)
+		{
+			PlayerController->InputComponent = NewObject<UInputComponent>(PlayerController);
+			PlayerController->InputComponent->RegisterComponent();
+		}
+
+		// Bind the ESC key to the HandleExitGame function
+		const FInputActionKeyMapping ExitGameMapping("ExitGame", EKeys::Escape);
+		UInputSettings::GetInputSettings()->AddActionMapping(ExitGameMapping);
+
+		PlayerController->InputComponent->BindAction("ExitGame", IE_Pressed, this, &AGameMode_CPP::HandleExitGame);
+	}
 	//Создание виджета
 	if (MenuClass) {
 		UWorld* world = GetWorld();
 		if (world) {
-			APlayerController* PlayerController = world->GetFirstPlayerController();
 			Menu = CreateWidget<UMenu_CPP>(PlayerController, MenuClass);
 			//Menu = CreateWidget<UMenu_CPP>(this, MenuClass);
 			PlayerController->SetInputMode(FInputModeUIOnly());
@@ -21,6 +38,11 @@ void AGameMode_CPP::BeginPlay()
 		}
 	}
 	Super::BeginPlay();
+}
+
+void AGameMode_CPP::HandleExitGame()
+{
+	UKismetSystemLibrary::QuitGame(GetWorld(), nullptr, EQuitPreference::Quit, true);
 }
 
 void AGameMode_CPP::Nachinaem()
@@ -91,4 +113,9 @@ void AGameMode_CPP::Nachinaem()
 		else { GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Red, FString("No world")); }
 	}
 	else { GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Red, FString("No menu class")); }
+}
+
+AGameMode_CPP* AGameMode_CPP::MyGetGameMode()
+{
+	return this;
 }

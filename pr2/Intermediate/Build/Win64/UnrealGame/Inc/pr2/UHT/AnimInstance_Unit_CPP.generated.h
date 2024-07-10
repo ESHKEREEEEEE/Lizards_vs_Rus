@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PR2_AnimInstance_Unit_CPP_generated_h
 
-#define FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_AnimInstance_Unit_CPP_h_16_INCLASS_NO_PURE_DECLS \
+#define FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_AnimInstance_Unit_CPP_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUAnimInstance_Unit_CPP(); \
 	friend struct Z_Construct_UClass_UAnimInstance_Unit_CPP_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UAnimInstance_Unit_CPP)
 
 
-#define FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_AnimInstance_Unit_CPP_h_16_ENHANCED_CONSTRUCTORS \
+#define FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_AnimInstance_Unit_CPP_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAnimInstance_Unit_CPP(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UAnimInstance_Unit_CPP();
 
 
-#define FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_AnimInstance_Unit_CPP_h_13_PROLOG
-#define FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_AnimInstance_Unit_CPP_h_16_GENERATED_BODY \
+#define FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_AnimInstance_Unit_CPP_h_14_PROLOG
+#define FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_AnimInstance_Unit_CPP_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_AnimInstance_Unit_CPP_h_16_INCLASS_NO_PURE_DECLS \
-	FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_AnimInstance_Unit_CPP_h_16_ENHANCED_CONSTRUCTORS \
+	FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_AnimInstance_Unit_CPP_h_17_INCLASS_NO_PURE_DECLS \
+	FID_Users_dhvfn_Documents_GitHub_Lizards_vs_Rus_pr2_Source_pr2_Public_AnimInstance_Unit_CPP_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -61,6 +61,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Starting")
 	void Nachinaem();
 
+	UFUNCTION(BlueprintCallable, Category = "Get")
+	AGameMode_CPP* MyGetGameMode();
+
 	/** Please add a variable description */
 	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "Default", meta = (EditInline = "true")) //set in blueprint
 	TSubclassOf<class UMenu_CPP> MenuClass;
@@ -78,5 +81,5 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-	
+	void HandleExitGame();
 };
